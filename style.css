@@ -1,0 +1,162 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #242424;
+  line-height: 1.6;
+}
+
+header {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: white;
+  background: #245c42;
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+}
+
+header p {
+  margin: 0;
+}
+
+main {
+  width: min(1100px, 92%);
+  min-height: 70vh;
+  margin: 2rem auto;
+}
+
+section h2 {
+  margin-bottom: 0.5rem;
+}
+
+#animal-count {
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+button,
+select {
+  font: inherit;
+  border-radius: 6px;
+}
+
+button {
+  border: 0;
+  padding: 0.65rem 1rem;
+  color: white;
+  background: #245c42;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #173e2c;
+}
+
+button:focus-visible,
+select:focus-visible {
+  outline: 3px solid #e2a83b;
+  outline-offset: 2px;
+}
+
+.sort-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+select {
+  padding: 0.55rem;
+  border: 1px solid #999;
+  background: white;
+}
+
+#animal-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.animal-card {
+  padding: 1.25rem;
+  border: 1px solid #d7ded9;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 7%);
+}
+
+.animal-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #245c42;
+}
+
+.animal-card p {
+  margin: 0.45rem 0;
+}
+
+.animal-card.adopted {
+  border-left: 5px solid #777;
+}
+
+.animal-status {
+  font-weight: bold;
+}
+
+.adoption-button {
+  margin-top: 0.75rem;
+}
+
+.error-message {
+  padding: 1rem;
+  border: 1px solid #b42318;
+  border-radius: 6px;
+  color: #8a1c13;
+  background: #fff0ee;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  background: #e3e9e5;
+}
+
+@media (max-width: 600px) {
+  .controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .sort-control {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .sort-control select {
+    width: 100%;
+  }
+
+  .filters button {
+    flex: 1;
+  }
+}
